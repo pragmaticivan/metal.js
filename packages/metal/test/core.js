@@ -266,9 +266,7 @@ describe('core', function() {
 
 	describe('Compatibility Mode', function() {
 		afterEach(function() {
-			if (typeof globals.window !== 'undefined') {
-				delete globals.window.__METAL_COMPATIBILITY__;
-			}
+			globals.window.__METAL_COMPATIBILITY__ = undefined;
 			core.disableCompatibilityMode();
 		});
 
@@ -283,10 +281,6 @@ describe('core', function() {
 		});
 
 		it('should return the data specified by global var', function() {
-			if (typeof globals.window === 'undefined') {
-				// Skip this test in Node.js environment.
-				return;
-			}
 			const data = {};
 			globals.window.__METAL_COMPATIBILITY__ = data;
 			assert.strictEqual(data, core.getCompatibilityModeData());

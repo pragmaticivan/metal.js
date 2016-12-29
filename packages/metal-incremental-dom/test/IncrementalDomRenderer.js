@@ -7,6 +7,7 @@ import { sunset } from '../../../test-utils';
 import { CHILD_OWNER } from '../src/children/children';
 import { Component, ComponentRegistry } from 'metal-component';
 import IncrementalDomRenderer from '../src/IncrementalDomRenderer';
+import IncrementalDOM from '../src/incremental-dom';
 
 var IncDom = IncrementalDOM;
 

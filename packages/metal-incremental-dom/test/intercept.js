@@ -3,6 +3,7 @@
 import {core, globals} from 'metal';
 import dom from 'metal-dom';
 import { getOriginalFns, startInterception, stopInterception } from '../src/intercept';
+import IncrementalDOM from '../src/incremental-dom';
 
 describe('intercept', function() {
 	var element;

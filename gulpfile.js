@@ -26,9 +26,14 @@ metal.registerTasks({
 	testDepTasks: ['build:cjs'],
 	testNodeSrc: [
 		'env/test/node.js',
+		'packages/metal/test/**/*.js',
+		//'packages/metal-dom/test/**/*.js',
+		'packages/metal-component/test/**/*.js',
+		'packages/metal-incremental-dom/test/**/*.js',
+		//'packages/metal-soy/test/**/*.js',
+		//'packages/metal-jsx/test/**/*.js',
 		'packages/metal-events/test/**/*.js',
-		'packages/metal-state/test/**/*.js',
-		'packages/metal/test/**/*.js'
+		'packages/metal-state/test/**/*.js'
 	],
 	testSaucelabsBrowsers: {
 		sl_chrome: {

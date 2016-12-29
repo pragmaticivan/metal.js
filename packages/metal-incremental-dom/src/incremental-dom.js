@@ -20,7 +20,9 @@ import { globals } from 'metal';
  */
 
 (function (global, factory) {
-  (factory((global.IncrementalDOM = global.IncrementalDOM || {})));
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
+  typeof define === 'function' && define.amd ? define(['exports'], factory) :
+  (factory((global.IncrementalDOM = {})));
 }(globals.window, function (exports) { 'use strict';
 
   /**
@@ -1219,6 +1221,10 @@ import { globals } from 'metal';
   exports.applyProp = applyProp;
   exports.notifications = notifications;
   exports.importNode = importNode;
+
+  if (typeof globals.window !== 'undefined') {
+		globals.window.IncrementalDOM = exports;
+	}
 
 }));
 

@@ -3,7 +3,7 @@
 import { buildCallFromConfig, buildConfigFromCall } from '../callArgs';
 import { isDef } from 'metal';
 import { startInterception, stopInterception } from '../intercept';
-
+import IncrementalDOM from '../incremental-dom';
 /**
  * Property identifying a specific object as a Metal.js child node, and
  * pointing to the component instance that created it.

@@ -4,6 +4,7 @@ import dom from 'metal-dom';
 import { globals } from 'metal';
 import { sunset } from '../../../../test-utils';
 import { captureChildren, getOwner, renderChildTree, CHILD_OWNER } from '../../src/children/children';
+import IncrementalDOM from '../../src/incremental-dom';
 
 describe('children', function() {
 	it('should capture children calls to incremental dom', function(done) {

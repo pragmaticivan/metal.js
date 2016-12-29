@@ -1,12 +1,12 @@
 'use strict';
 
-import './incremental-dom';
 import { getChanges, trackChanges } from './changes';
 import { clearData, getData } from './data';
 import { getOwner } from './children/children';
 import { getPatchingComponent, patch } from './render/patch';
 import { render, renderChild, renderFunction } from './render/render';
 import { Component, ComponentRenderer } from 'metal-component';
+import IncrementalDOM from './incremental-dom';
 
 class IncrementalDomRenderer extends ComponentRenderer.constructor {
 	/**

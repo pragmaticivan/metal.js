@@ -10,6 +10,7 @@ import { getCompatibilityModeData, getUid, isDef, isDefAndNotNull, isFunction, i
 import { disposeUnused, schedule } from '../cleanup/unused';
 import { getOriginalFn, startInterception, stopInterception } from '../intercept';
 import { Component, ComponentRegistry } from 'metal-component';
+import IncrementalDOM from '../incremental-dom';
 
 const renderingComponents_ = [];
 const emptyChildren_ = [];

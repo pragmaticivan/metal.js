@@ -4,6 +4,7 @@ import { append, exitDocument } from 'metal-dom';
 import { globals } from 'metal';
 import { getData } from '../data';
 import { render } from './render';
+import IncrementalDOM from '../incremental-dom';
 
 const patchingComponents_ = [];
 
